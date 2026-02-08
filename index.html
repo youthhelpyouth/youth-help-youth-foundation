@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouthHelpYouth Foundation | Jamaica</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb;
+            scroll-behavior: smooth;
+        }
+        .btn-hover {
+            transition: all 0.2s ease-in-out;
+        }
+        .btn-hover:hover {
+            transform: scale(1.03);
+        }
+        /* Page transition style */
+        .page {
+            display: none;
+        }
+        .page.active {
+            display: block;
+        }
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            background: white;
+            border-radius: 0.75rem;
+            border: 1px solid #e5e7eb;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Nav Bar -->
+    <nav class="bg-white border-b sticky top-0 z-50 py-4 shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+            <button onclick="showPage('home')" class="text-xl font-bold text-blue-600">YouthHelpYouth</button>
+            <div class="hidden sm:flex space-x-6 text-sm font-semibold">
+                <button onclick="showPage('home')" class="hover:text-blue-500">Home</button>
+                <button onclick="showPage('relief')" class="hover:text-blue-500">Hurricane Relief</button>
+                <a href="#contact" class="hover:text-blue-500">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE 1: MAIN FOUNDATION HOME -->
+    <main id="home" class="page active">
+        <!-- Foundation Hero -->
+        <section class="bg-blue-700 text-white py-20 px-6 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-4xl sm:text-6xl font-bold mb-4">YouthHelpYouth Foundation</h1>
+                <p class="text-xl mb-8 font-light italic text-blue-200">Building Tomorrow, Today.</p>
+                <p class="text-lg mb-8 max-w-2xl mx-auto">Empowering the youth of Jamaica to lead, serve, and rebuild our communities.</p>
+                <button onclick="showPage('relief')" class="btn-hover bg-yellow-400 text-blue-900 font-bold py-4 px-10 rounded-full shadow-lg text-lg">
+                    Check out our Hurricane Relief Project →
+                </button>
+            </div>
+        </section>
+
+        <!-- Foundation Mission & Vision -->
+        <section class="py-16 px-6">
+            <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
+                <div class="text-center p-8 bg-white rounded-2xl shadow-sm border border-gray-100">
+                    <div class="text-4xl mb-4">🇯🇲</div>
+                    <h3 class="text-xl font-bold mb-2">Our Mission</h3>
+                    <p class="text-blue-600 font-bold text-sm mb-3">"Youth serving Youth."</p>
+                    <p class="text-gray-600">Proving that age is just a number. Jamaican youth can lead major changes in our country.</p>
+                </div>
+                <div class="text-center p-8 bg-white rounded-2xl shadow-sm border border-gray-100">
+                    <div class="text-4xl mb-4">✨</div>
+                    <h3 class="text-xl font-bold mb-2">Our Vision</h3>
+                    <p class="text-blue-600 font-bold text-sm mb-3">"Changing the Future."</p>
+                    <p class="text-gray-600">A Jamaica where every young person has the resources to help and the confidence to lead today.</p>
+                </div>
+                <div class="text-center p-8 bg-white rounded-2xl shadow-sm border border-gray-100">
+                    <div class="text-4xl mb-4">🏗️</div>
+                    <h3 class="text-xl font-bold mb-2">Our Motto</h3>
+                    <p class="text-blue-600 font-bold text-sm mb-3 uppercase tracking-wider">Building Tomorrow, Today</p>
+                    <p class="text-gray-600">Preparing our generation for challenges and showing them how to lift others up.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advertising Slots Section -->
+        <section class="py-16 px-6 bg-gray-50 border-y border-gray-100">
+            <div class="max-w-5xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-4">Community Partners</h2>
+                <p class="text-gray-600 mb-10">We appreciate everyone who supports our mission. Advertising slots are available for our donors!</p>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border-2 border-dashed border-blue-200 flex flex-col items-center justify-center min-h-[200px]">
+                        <h4 class="font-bold text-gray-400">Partner Slot A</h4>
+                        <p class="text-xs text-gray-400 mt-2 italic text-center">Reserved for our first major donor or sponsor.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border-2 border-dashed border-blue-200 flex flex-col items-center justify-center min-h-[200px]">
+                        <h4 class="font-bold text-gray-400">Partner Slot B</h4>
+                        <p class="text-xs text-gray-400 mt-2 italic text-center">Your business logo or shout-out goes here!</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border-2 border-dashed border-blue-200 flex flex-col items-center justify-center min-h-[200px]">
+                        <h4 class="font-bold text-gray-400">Partner Slot C</h4>
+                        <p class="text-xs text-gray-400 mt-2 italic text-center">Support the youth of Western Jamaica.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- PAGE 2: HURRICANE RELIEF -->
+    <main id="relief" class="page">
+        <section class="bg-blue-500 text-white py-16 px-6 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl sm:text-5xl font-bold mb-4">Hurricane Melissa Relief</h2>
+                <p class="text-lg mb-6">Focusing on Westmoreland, St. James, and Hanover</p>
+                <div class="inline-block bg-white text-blue-600 font-bold py-2 px-6 rounded-full text-sm uppercase tracking-widest shadow-md">
+                    Target Goal: 100 Relief Bags
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 px-6 bg-white">
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gray-100 p-6 sm:p-10 rounded-3xl shadow-inner border border-gray-200">
+                    <h3 class="text-2xl font-bold mb-8 text-center">📦 Items Needed for 7-Day Bags</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="checkbox-item"><span>✅</span> <span class="ml-3 font-medium">Canned Proteins (Sardines, Corned Beef)</span></div>
+                        <div class="checkbox-item"><span>✅</span> <span class="ml-3 font-medium">Rice, Flour, Cornmeal</span></div>
+                        <div class="checkbox-item"><span>✅</span> <span class="ml-3 font-medium">Bottled Water</span></div>
+                        <div class="checkbox-item"><span>✅</span> <span class="ml-3 font-medium">Soap & Personal Hygiene Items</span></div>
+                    </div>
+                </div>
+                <div class="mt-8 text-center">
+                    <button onclick="showPage('home')" class="text-blue-600 font-semibold hover:underline">← Back to Foundation Home</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-6 bg-white border-t">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="text-3xl font-bold mb-4 text-center">How to Get Involved</h2>
+            <p class="text-center text-gray-600 mb-8 font-medium italic">Email us at: <span class="text-blue-600 not-italic font-bold">contactyouthhelpyouth@gmail.com</span></p>
+            
+            <form id="contact-form" class="space-y-4" onsubmit="event.preventDefault(); document.getElementById('msg').style.display='block'; this.reset();">
+                <input type="text" placeholder="Your Name" required class="w-full p-3 border rounded-xl bg-gray-50 focus:outline-blue-500">
+                <textarea placeholder="How would you like to help? (Donate items, Volunteer, or Sponsor an Ad Slot)" rows="4" required class="w-full p-3 border rounded-xl bg-gray-50 focus:outline-blue-500"></textarea>
+                <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 rounded-xl shadow-lg hover:bg-blue-700 transition">Send Message</button>
+                <p id="msg" class="text-center text-green-600 font-bold hidden mt-4" style="display:none;">Message sent! We'll be in touch soon.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 text-center text-gray-400 text-sm border-t">
+        <p>YouthHelpYouth Foundation 2025 | Jamaica 🇯🇲</p>
+        <p class="mt-2 font-bold text-blue-500 italic">#BuildingTomorrowToday</p>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
